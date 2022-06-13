@@ -1,0 +1,3 @@
+ffmpeg -i 2022-06-07_14-54-17.mkv -vf "crop=2100:800:0:240"  -ss 00:00:04 -to 00:01:00 -an output.m4v
+qt-faststart output.m4v output-stream.m4v
+

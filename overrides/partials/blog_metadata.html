@@ -1,0 +1,11 @@
+<aside class="mdx-author">
+  {% if config.extra.blog.author_image is defined %}
+    <p>
+      <img alt={{ config.extra.blog.author }} src={{ config.extra.blog.author_image }}>
+    </p>
+  {% endif %}
+  <p style="color: rgb(57, 139, 114); margin: 0.25rem 0 0 0;">
+    <span>posted by <b> {{ page.meta.author }} </b></span>
+    <span> {{ page.meta.date.strftime("%B %d, %Y") }} </span>
+  </p>
+</aside>

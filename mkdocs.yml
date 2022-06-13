@@ -1,0 +1,257 @@
+site_name: 'matsim.org'
+site_description: 'Official website for the MATSim agent-based transport simulation framework'
+site_url: 'https://billyc.github.io/website-next'
+repo_url: 'https://github.com/billyc/website-next'
+edit_uri: 'edit/master/docs/'
+remote_branch: gh-pages
+
+nav:
+  - Home:
+      - index.md
+      - About MATSim: about/about-matsim.md
+      - Impressum: about/impressum.md
+  - Gallery:
+      - gallery/index.md
+      - 'Dakar, Senegal': gallery/dakar.md
+      - 'USA': gallery/usa-nationwide.md
+      - 'Open Île-de-France, France': gallery/ile_de_france.md
+      - 'Paris, France': gallery/paris.md
+      - 'Sweden': gallery/sweden.md
+      - 'Santiago, Chile': gallery/santiago.md
+      - 'Quito, Ecuador': gallery/quito.md
+      - 'Vorarlberg, Austria': gallery/vorarlberg.md
+      - 'Poznan, Poland': gallery/poznan.md
+      - 'Germany': gallery/germany.md
+      - 'Seoul, South Korea': gallery/seoul.md
+      - 'Singapore': gallery/singapore.md
+      - 'Freight in South Africa': gallery/south-africa.md
+      - 'Tel Aviv, Israel': gallery/telaviv.md
+      - 'Berlin, Germany': gallery/berlin.md
+      - 'Air Traffic over Europe': gallery/air-traffic.md
+      - 'Zurich, Switzerland': gallery/zurich.md
+      - 'Munich, Germany': gallery/munich.md
+      - 'Gauteng, South Africa': gallery/gauteng.md
+      - 'Padang, Indonesia': gallery/padang.md
+      - 'Joinville, Brazil': gallery/joinville.md
+      - 'Izmir, Turkey': gallery/izmir.md
+      - 'Toronto, Canada': gallery/toronto.md
+      - 'Sioux Falls, SD, USA': gallery/sioux-falls.md
+      - 'Aliaga, Turkey': gallery/aliaga.md
+      - 'Caracas, Venezuela': gallery/caracas.md
+
+  - Getting Started:
+      - Installation: downloads.md
+      - Tutorials: tutorials/general.md
+  - For Users:
+      - 'User Guide': userguide/index.md
+      - MATSim Book: the-book.md
+      - Extensions: userguide/extensions.md
+      - Analysis Tools: userguide/analysis.md
+  - For Developers:
+      - Setting up your dev environment:
+          - IDE configuration: devguide/ide-configuration.md
+          - Java: devguide/java.md
+          - Development environment: devguide/development-environment.md
+          - Eclipse: devguide/eclipse/index.md
+          - Eclipse JDK: devguide/eclipse/jdk.md
+          - Proxy configuration: devguide/proxy-configuration.md
+      - MATSim Coding Conventions:
+          - Conventions: devguide/conventions.md
+          - Naming conventions: devguide/naming-conventions.md
+          - Configuration conventions: devguide/configuration-conventions.md
+          - Data in source repository: devguide/data-in-source-repository.md
+          - Documenting your code: devguide/documenting-your-code.md
+          - Commit rules: devguide/commit-rules.md
+          - Composition vs inheritance: devguide/prefer-composition-and-delegation-over-inheritance.md
+          - Using Generics: devguide/using-generics.md
+      - Builds:
+          - Build a release: devguide/build-release.md
+          - Custom GUI: devguide/custom-gui.md
+      - API Documentation
+      - Issue Tracker
+      - Build Server
+      - MATSim Community Pages
+  - Community:
+      - about/about-us.md
+  - News:
+      - news/index.md
+      - 2022:
+          - news/2022-05-10-job-opening-sbb.md
+          - news/2022-03-08-job-dresden.md
+          - news/2022-02-10-job-post-boku.md
+          - news/2022-02-10-abm-modelling-uae.md
+      - 2021:
+          - news/2021-12-03-matsim-um.md
+          - news/2021-10-04-job-post-sbb.md
+          - news/2021-06-08-teralytics-job-posting.md
+          - news/2021-06-08-research-position.md
+          - news/2021-05-27-research-position-v.md
+          - news/2021-05-27-research-position-bmvi.md
+          - news/2021-05-27-research-assistant-covid19.md
+          - news/2021-05-03-job-opening-moia.md
+          - news/2021-04-26-PR-labelled-releases.md
+          - news/2021-04-12-matsim-13-released.md
+          - news/2021-02-10-matsim-user-meeting-2021.md
+          - news/2021-01-05-ulco-murdasp.md
+      - 2020:
+          - news/2020-12-07-news-item.md
+          - news/2020-10-30-hermes.md
+          - news/2020-10-08-open-positions-politechnique-montreal.md
+          - news/2020-10-08-episim-berlin.md
+          - news/2020-07-15-matsim-12-released.md
+          - news/2020-03-12-mum-cancelled.md
+          - news/2020-02-19-itm-seattle-2020.md
+          - news/2020-02-13-events-comparison-in-tests.md
+          - news/2020-01-13-jobPostSBB.md
+      - 2019:
+          - news/2019-12-20-matsim-user-meeting-registration.md
+          - news/2019-12-05-matsim-news-now-on-github.md
+          - news/2019-12-02-routing-mode.md
+          - news/2019-11-25-tel-aviv-univ.md
+          - news/2019-10-28-vrije-univ-brussels.md
+          - news/2019-10-04-matsim-user-meeting.md
+
+front_page_buttons:
+  - section: Gallery
+    blurb: MATSim is used all over the world! Have a look at the gallery to see how others are using MATSim
+    color: '#704'
+    icon: .icons/octicons/globe-24.svg
+    link: gallery/
+
+  - section: Documentation
+    blurb: Read up upon MATSim or have a look at the available tutorials to learn how to use MATSim
+    color: '#074'
+    icon: .icons/octicons/book-24.svg
+    link: docs/
+
+  - section: Install
+    blurb: Install MATSim on your computer
+    color: '#047'
+    icon: .icons/octicons/download-24.svg
+    link: downloads/
+
+  - section: Conferences & Meetings
+    blurb: Upcoming announcements, and archives of previous conferences
+    color: '#752'
+    icon: .icons/octicons/megaphone-24.svg
+    link: conferences/
+
+  - section: Analysis Tools
+    blurb: There are many ways to analyze and view MATSim results
+    color: '#505'
+    icon: .icons/octicons/git-merge-24.svg
+    link: userguide/analysis
+
+  - section: Support / Get Help
+    blurb: Ask your questions on our Q&A platform
+    color: '#626'
+    icon: .icons/octicons/question-24.svg
+    link: https://github.com/matsim-org/matsim-code-examples/issues
+
+theme:
+  name: 'material'
+  custom_dir: overrides
+  #  icon:
+  #    repo: fontawesome/brands/github-alt
+  favicon: 'images/favicon.png'
+  logo: 'images/matsim-logo-white-trimmed.png'
+  language: 'en'
+  font:
+    text: 'Source Sans Pro'
+    code: 'Roboto Mono'
+  features:
+    - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    # - navigation.sections
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+
+markdown_extensions:
+  # Code highlighting in ``` ``` blocks
+  - codehilite:
+      guess_lang: true
+  # Table of Contents
+  - toc:
+      permalink: true
+  # block-styled side content
+  - admonition
+  # linkifies URL and email links without having to wrap them in Markdown syntax. Also, allows shortens repository issue, pull request, and commit links.
+  - pymdownx.magiclink
+  # Task lists (https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/)
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # Highlight words with ==mark me==
+  - pymdownx.mark
+  # Adds support for deletion ~~Delete me~~ and subscript text~a\ subscript~
+  - pymdownx.tilde
+  # This extension is a convenience extension which includes many pymdownx extensions
+  # (https://facelessuser.github.io/pymdown-extensions/extensions/extra/)
+  - pymdownx.extra
+  # (https://facelessuser.github.io/pymdown-extensions/extensions/details/)
+  - pymdownx.details
+  # Tabbed provides a syntax to easily add tabbed Markdown content.
+  # https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
+  - pymdownx.tabbed
+  # Adds syntax for defining footnotes in Markdown documents (https://python-markdown.github.io/extensions/footnotes/)
+  - footnotes
+  # Adds the ability to define abbreviations
+  - abbr
+  # Include files in other documents like {!some/dir/in/docs/filename.md!}
+  - markdown_include.include:
+      base_path: docs
+  # Metadata support in pages
+  # (https://squidfunk.github.io/mkdocs-material/extensions/metadata/)
+  - meta
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+  blog:
+    dir: news
+    list_length: 8
+    extended_preview: false
+  # social:
+  #   - icon: fontawesome/solid/earth-americas
+  #     link: https://matsim.org/
+  #     name: Website
+  #   - icon: fontawesome/brands/github
+  #     link: https://github.com/matsim-org/matsim-libs
+  #     name: GitHub
+
+extra_css:
+  - extra.css
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - redirects:
+      redirect_maps:
+        'ftldns/database.md': database/index.md
+        'main/presentations.md': index.md
+        'main/prerequesites.md': main/prerequisites.md
+
+watch:
+  - overrides

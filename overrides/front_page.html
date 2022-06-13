@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block content %} {{ page.content }}
+
+<br />
+<h1><b>Explore MATSim</b></h1>
+
+<!-- SECTION BUTTONS -->
+<div class="matsim-feature-sections">
+  {% for box in config.front_page_buttons %}
+  <div class="matsim-feature" style="background-color: #f0f0f0">
+    <a href="{{ box.link }}">
+      <div style="display: flex; flex-direction: column">
+        <div style="display: flex">
+          <div
+            style="
+              min-width: 3.5rem;
+              width: 3.5rem;
+              filter: invert(42%) sepia(93%) saturate(220%) hue-rotate(170deg) brightness(100%)
+                contrast(119%);
+            "
+          >
+            <!-- <img src="../.icons/octicons/megaphone-16.svg" style="color: white" /> -->
+            {% include box.icon %}
+          </div>
+          <p
+            style="
+              margin-left: 0.5rem;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 20px;
+              margin-top: 0.2rem;
+              line-height: 1.1rem;
+            "
+          >
+            {{ box.section}}
+          </p>
+        </div>
+        <p>{{ box.blurb}}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- BLOG POSTS -->
+<br />
+<h1><b>Latest MATSim News</b></h1>
+
+{% set blog_posts = [] %} {% for page in nav.pages %} {% if
+page.url.startswith(config.extra.blog.dir) and page.meta.date is defined %}
+<!-- or "" suppresses "None" output-->
+{{ blog_posts.append( page ) or "" }} {% endif %} {% endfor %} {% for page in
+(blog_posts|sort(attribute="meta.date", reverse=True))[:config.extra.blog.list_length] %}
+<hr />
+<h2 style="margin-bottom: 0"><a href="{{ page.url|url }}">{{ page.title }}</a></h2>
+{% include "partials/blog_metadata.html" %} {% if page.meta.summary %}
+<p>{{ page.meta.summary }}</p>
+{% endif %}
+<!-- Use a hidden p tag to provide a preview -->
+{% if config.extra.blog.extended_preview %} {{ page.content.split("
+<p hidden>#more</p>
+", 1)[0] }}
+<a href="{{ page.url|url }}#more">
+  <span class="twemoji"> {% include ".icons/octicons/arrow-right-24.svg" %} </span>
+  Continue reading
+</a>
+{% endif %} {% endfor %}
+<br />
+<br />
+<br />
+&nbsp; {% endblock %}

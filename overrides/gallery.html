@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+<!-- x -->
+{% block content %}
+
+<!-- -->
+{{ page.content }}
+
+<!-- Find gallery pages -->
+{% set gallery_posts = [] %}
+{% for page in nav.pages %}
+  {% if page.url.startswith('gallery') and not page.url == 'gallery/' %}
+    <!-- or "" suppresses "None" output-->
+    {{ gallery_posts.append( page ) or "" }}
+  {% endif %}
+{% endfor %}
+
+<!-- build gallery table -->
+<div class="gallery-grid">
+  {% for scenario in gallery_posts %}
+  <div class="gallery-grid-cell">
+    <a href="{{ base_url}}/{{ scenario.url }}">
+      <h4>{{ scenario.title }}</h4>
+      <img
+        class="dataset-thumbnail"
+        src="{{ base_url }}/{{ scenario.meta.thumbnail }}"
+        width="320"
+        height="180"
+        alt="image"
+      />
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
